@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<!-- -------------------- Head section -------------------- -->
+	<head>
+
+	<!-- ---------- Title section ---------- -->
+	<title>Donation process</title>
+
+    <!-- --StyleSheets Link -- -->
+    <link href="process.css" rel="stylesheet"/>
+    <link href="pagestyle.css" rel="stylesheet"/>
+ 
+	</head>
+	
+<!-- -------------------- Body section -------------------- -->
+	<body>
+	
+    <!-- --------------- Header section --------------- -->
+		<header>
+		
+			<nav class="topnav">
+				<img src="Image/Logo.png" alt="logo">
+				<a href="Index.php">Home</a>
+				<a href="process.html">Donation Procees</a>
+				<a href="RequirementQuiz.php">Requirement Quiz</a>
+				<a href="bookAppointment.php">Book Appointment</a>
+				<button onclick="document.location='Newlogin.html'" class="button" type="button">Login</button>
+				<button onclick="document.location='Signup.html'" class="button" type="button">Sign up</button>
+			</nav>
+			
+		</header>
+
+
+	<!-- ------------ Introduction section ------------ -->
+		<div class="section1"> <div class="title"> <p>Donation process</p> </div> </div>
+	
+		<img class="img" src="Image/process.png" alt="user" /> 
+   
+   
+	<!-- ------------ Process section ------------ -->
+		<section>
+		
+			<div class="container reveal fade-right">
+			
+				<div class="text-container1">
+				
+				<!-- ---- Step 1 ---- -->
+					<div class="text-box">
+					
+						<h3>1. Register</h3>
+						
+						<ul> 
+							<li>Photo ID</li> 
+							<li>Full name</li>
+							<li>Phone number</li> 
+						</ul>
+						
+					</div>
+					
+				<!-- ---- Step 2 ---- -->
+				
+					<div class="text-box">
+					
+						<h3>2. Health History Questionnaire</h3>
+						
+						<ul> 
+							<li>Health history</li> 
+							<li>Recent travel</li>
+							<li>Immunization</li> 
+						</ul>
+						
+					</div>
+					
+				</div>
+				
+			<!-- -------- New Line -------- -->
+			
+				<div class="text-container">
+					
+					
+				<!-- ---- Step 3 ---- -->
+				
+					<div class="text-box">
+				 
+						<h3>3. Health Screening</h3>
+						
+						<ul> 
+							<li>Blood pressure</li> 
+							<li>Temperature</li>
+							<li>Pulse</li> 
+							<li>Hemoglobin (Iron)</li>
+						</ul>
+						
+					</div>
+				  
+				<!-- ---- Step 4 ---- -->
+				
+					<div class="text-box">
+					
+						<h3>4. Blood Draw</h3>
+						
+						<ul> 
+							<li>Clean arm</li> 
+							<li>Insert sterile needle</li>
+							<li>Relax for about 5-8 minutes</li> 
+						</ul>
+					
+					</div>
+					
+				<!-- ---- Step 5 ---- -->
+					<div class="text-box">
+						
+						<h3>5. Snacks</h3>
+						
+						<ul> 
+							<li>Recharge</li> 
+							<li>Re-hydrate</li>
+						</ul>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+		  
+		</section>   
+
+           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		   
+		   
+	<!-- --------------- Footer section --------------- -->
+	
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+			
+				<p class="footer-links">
+					<a href="Index.php">Home</a>
+				<a href="process.html">Donation Procees</a>
+				<a href="RequirementQuiz.php">Requirement Quiz</a>
+				<a href="bookAppointment.php">Book Appointment</a>
+				</p>
+				
+			</div>
+			
+			<div class="footer-center"><h2>For more information:<a href="https://wateenapp.org/">Wateen</a></h2></div>
+			
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>Group Members:</span>
+						Elaf Aloufi, Manar Altaiary, Raghad Alzahrani , Khlood Alamri<br>
+						Ealoufi0015@stu.kau.edu.sa, Maltaiary0001@stu.ka.edu.sa, Ralzahrani0689@stu.kau.edu.sa,
+						kalamri0078@stu,kau,edu,sa
+				</p>			
+
+			</div>
+
+		</footer>
+      
+	</body>
+	
+	<script> 
+	
+		function reveal() {
+			
+			var reveals = document.querySelectorAll(".reveal");
+
+			for (var i = 0; i < reveals.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = reveals[i].getBoundingClientRect().top;
+				var elementVisible = 150;
+
+				if (elementTop < windowHeight - elementVisible) {
+					reveals[i].classList.add("active");
+				} else {
+					reveals[i].classList.remove("active");
+				}
+			
+			}
+		}
+
+		window.addEventListener("scroll", reveal);
+		
+	</script>
+	
+</html>

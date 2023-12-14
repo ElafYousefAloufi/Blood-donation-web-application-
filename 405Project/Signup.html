@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<!-- -------------------- Head section -------------------- -->
+	<head>
+		
+		<!-- ---------- Title section ---------- -->
+		<title>Sign up Form</title>
+
+		<!-- --StyleSheets Link -- -->
+		<link href="SignupStyle.css" rel="stylesheet"/>
+		<link href="pagestyle.css" rel="stylesheet"/>
+	 
+	</head>
+
+<!-- -------------------- Body section -------------------- -->
+	<body>
+  
+	
+	<!-- --------------- Header section --------------- -->
+		<header>
+		
+			<nav class="topnav">
+				<img src="Image/Logo.png" alt="logo">
+				<a href="Index.php">Home</a>
+				<a href="process.html">Donation Procees</a>
+				<a href="RequirementQuiz.php">Requirement Quiz</a>
+				<a href="bookAppointment.php">Book Appointment</a>
+				<button onclick="document.location='Newlogin.html'" class="button" type="button">Login</button>
+				<button onclick="document.location='Signup.html'" class="button" type="button">Sign up</button>
+			</nav>
+			
+		</header>
+		
+	<!-- ------------ Introduction section ------------ -->
+		<div> 
+			
+			<p id="welcome">Create new account<span id="dot">.</span> </p> 
+			
+			<!-- link to LogIn Page -->
+			<p id="already">Already a member? <a href="Newlogin.html"> Login</a> </p> 
+			
+		</div> 
+	
+	
+	<!-- --------------- SignUp Section -------------- -->
+		<div class="login-box">
+		
+			<h2>Sign Up</h2>
+			
+		<!-- ------------- Form Section ------------->
+			<form name = "form1" action="signUp.php" method="post" onsubmit="return ValidateEmail()">
+			
+				<!-- username -->
+				<div class="user-box1">
+					<input type="user" name="username" id="username" required="">
+					<label>Username</label>
+				</div>
+				
+				<!-- password -->
+				<div class="user-box1">
+				<input type="password" placeholder='••••••••••••••' class="password" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}" title="Must contain at least one number and one uppercase and lowercase letter and one special character, and at least 8 or more characters" required /><br><br>
+				<label>Password</label>
+				</div>
+				
+				<!-- email -->
+				<div class="user-box1">
+					<input type="email" name="email" id="email" required="">
+					<label>Email</label>
+				</div>
+				
+				<!-- phone -->
+				<div class="user-box1">
+					<input type="phone" name="phone" id="phone" required="">
+					<label>Phone</label>
+				</div>
+				
+				<!-- blood type -->
+				<div> 
+					<label class="bloodtypes" for="blood"> Enter your blood type </label>
+						<select class="selectt" name="BloodType" id="BloodType"> 
+							<option value="A+">A+</option>			
+							<option value="A-">A-</option>	
+							<option value="B+">B+</option>				
+							<option value="B-">B-</option>    
+							<option value="AB+">AB+</option>   
+							<option value="AB-">AB-</option>  
+							<option value="O+">O+</option>		
+							<option value="O-">O-</option>			
+							<option value="Type" selected="selected">Type</option>    
+						</select> 
+				</div> 
+				
+			<!-- ---------- Submet ---------- -->
+				
+				  <div class="submit">
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <input id="dis" type="submit"  name="Submit"  value="Submit" onclick="ValidateEmail(document.form1.email)"/>
+                    </a>
+
+				
+				
+				
+					
+					
+				</div>
+			
+			</form>
+			
+		</div>
+
+		<div class="photo"><img id="homepagephoto" src="Image/Homepage.png" alt="homepage"/></div> 
+	
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		
+		
+	<!-- --------------- Footer section --------------- -->
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+			
+				<p class="footer-links">
+				<a href="Index.php">Home</a>
+				<a href="process.html">Donation Procees</a>
+				<a href="RequirementQuiz.php">Requirement Quiz</a>
+				<a href="bookAppointment.php">Book Appointment</a>
+				</p>
+				
+			</div>
+			
+			<div class="footer-center"><h2>For more information:<a href="https://wateenapp.org/">Wateen</a></h2></div>
+			
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>Group Members:</span>
+						Elaf Aloufi, Manar Altaiary,
+						Raghad Alzahrani , Khlood Alamri<br>
+						Ealoufi0015@stu.kau.edu.sa, Maltaiary0001@stu.ka.edu.sa,
+						Ralzahrani0689@stu.kau.edu.sa,
+						kalamri0078@stu,kau,edu,sa
+				</p>			
+
+			</div>
+
+		</footer>
+     
+	 
+	<!-- --------------- JS section --------------- -->
+		<script>
+
+			const userInput=document.querySelectorAll("input");
+
+			label=document.querySelectorAll("label"); 
+
+			for (let index = 0; index < userInput.length; index++) {
+				const input = userInput[index];
+				input.addEventListener('input',
+					function(){
+					
+						if(input.value.length>0){
+							label[index].style.top="-20px";
+						}
+						
+						else if(input.value.length==0&&label[index].style.top=="-20px"){
+							label[index].style.top="0";
+						}
+					}
+				);
+				
+			}
+			
+	function ValidateEmail(enteredemail){
+			  
+ var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				
+				
+				if(enteredemail.value.match(mailformat)){
+					return true;
+				}
+				
+				else{
+					
+					alert("You have entered an invalid email address!"); //The pop up alert for an invalid email address
+					document.form1.email.focus();
+					return false;
+				}
+			}
+		</script>
+	
+	
+	<body>
+  
+</html>

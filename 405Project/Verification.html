@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<!-- -------------------- Head section -------------------- -->
+<head>
+
+  <!-- ---------- Title section ---------- -->
+  <title>Forget Password</title>
+
+    <!-- --StyleSheets Link -- -->
+    <link href="ForgetStyle.css" rel="stylesheet"/>
+    <link href="pagestyle.css" rel="stylesheet"/>
+ 
+</head>
+
+   <!-- -------------------- Body section -------------------- --> 
+  <body>
+  
+  <nav class="topnav">
+				<img src="Image/Logo.png" alt="logo">
+				<a href="Index.php">Home</a>
+				<a href="process.html">Donation Procees</a>
+				<a href="RequirementQuiz.php">Requirement Quiz</a>
+				<a href="bookAppointment.php">Book Appointment</a>
+				<button onclick="document.location='Newlogin.html'" class="button" type="button">Login</button>
+				<button onclick="document.location='Signup.html'" class="button" type="button">Sign up</button>
+			</nav>
+	
+<div class="section1">
+  <div class="login-box">
+  
+            <h2>Code Verification</h2>
+			  <div class="Form-Message-Error"> </div> 
+            <form action="verificationchecked.php" method="POST">
+              
+			  <br/>
+                       <div class="user-box1">
+                    <input class="form-input" type="text" name="code" required> 
+                    <label>Enter the code</label>
+					   <div class="Form-Input-Error"> </div> 
+                </div>
+
+
+
+                <div class="submit">
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <input id="dis" type="submit" name="codecheck" value="Verify"/>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+	</div>
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<!-- --------------- Footer section --------------- -->
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+				<p class="footer-links">
+					<a href="Index.php">Home</a>
+				<a href="process.html">Donation Procees</a>
+				<a href="RequirementQuiz.php">Requirement Quiz</a>
+				<a href="bookAppointment.php">Book Appointment</a>
+				</p>
+			</div>
+			
+			<div class="footer-center"><h2>For more information:<a href="https://wateenapp.org/">Wateen</a></h2></div>
+			
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>Group Members:</span>
+						Elaf Aloufi, Manar Altaiary, Raghad Alzahrani , Khlood Alamri<br>
+						Ealoufi0015@stu.kau.edu.sa, Maltaiary0001@stu.ka.edu.sa, Ralzahrani0689@stu.kau.edu.sa,kalamri0078@stu,kau,edu,sa
+				</p>			
+			</div>
+			
+		</footer>
+	<script>
+
+const userInput=document.querySelectorAll("input");
+
+label=document.querySelectorAll("label"); 
+
+
+
+        for (let index = 0; index < userInput.length; index++) {
+            const input = userInput[index];
+            input.addEventListener('input',function(){
+                      if(input.value.length>0){
+
+                        label[index].style.top="-20px";
+                      }else if(input.value.length==0&&label[index].style.top=="-20px"){
+                        label[index].style.top="0";
+
+                      }
+                 });
+            
+        }
+
+    </script>
+	
+  <body>
+  
+</html>

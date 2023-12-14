@@ -1,0 +1,122 @@
+
+.title{
+ position: absolute;
+ top:25%;
+ left:180px;
+ font-size: 3em;
+ font-weight: bold;
+ color:#7d437a;
+}
+.img{
+	position: absolute;
+    top:30%;
+	right:90px;
+}
+
+.plane{
+	position: absolute;
+	width:990px;
+	height:250px;
+	top:60%;
+    left:60px;
+	background-color:#DAEBFD;
+	border-radius:20px;
+    padding: 20px ;
+	
+	
+}
+
+.plane p{
+	font-size: 1.5em;
+	padding-left:10px;
+	
+}
+.locationPlane{
+	width:300px;
+	height:99px;
+	background-color:white;
+	border-radius:20px;
+	position:absolute;
+	top:100px;
+}
+.locationPlaneTitle{
+    padding-top:10px;
+	margin:0px;
+	
+}
+
+.TimePlane{
+	width:300px;
+	height:99px;
+	background-color:white;
+	border-radius:20px;
+	position:absolute;
+	left:350px;
+	top:100px;
+	
+}
+
+.TimePlaneTitle{
+    padding-top:10px;
+	margin:0px;
+	
+}
+
+.DatePlane{
+	width:300px;
+	height:99px;
+	background-color:white;
+	border-radius:20px;
+	position:absolute;
+	left:690px;
+	top:100px;
+	
+}
+.DatePlaneTitle{
+    padding-top:10px;
+	margin:0px;	
+}
+
+input[type=submit]{
+  background-color: #FC7091;
+  border-radius: 15px;
+  border: none;
+  float: right;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  height: 35px;
+  width:95px;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  top:310px;
+  left:250px;
+  
+	
+}
+.ppDate {
+  height: 38px;
+  font-size: 12px;
+  padding-left: 6px;
+}
+.ppDate::-webkit-inner-spin-button,
+.ppDate::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.ppDate:focus::-webkit-calendar-picker-indicator, .ppDate:hover::-webkit-calendar-picker-indicator {
+  display: block;
+  -webkit-appearance: menulist;
+}
+.ppDate::-webkit-clear-button {
+  display: none;
+  -webkit-appearance: none;
+}
+.constrained {
+  max-width: 160px;
+}

@@ -1,0 +1,148 @@
+.topnav {
+  overflow: hidden; 
+}
+
+.topnav img{
+  float: left;
+  padding: 10px 10px;
+  height=40;
+}
+
+.signature {
+  background-color: #FFE5E5;
+  padding: 10px;
+  text-align: center;
+  color: #B8B6B6;
+ margin-top: 15%;
+}
+
+
+input[type=text] , input[type=password] {
+  font-family: "Times New Roman", Times, serif;
+  padding:4px;
+  margin-left:10px;
+  border:0;
+  border-radius:10px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+input[type=text]:hover , input[type=password]:hover {
+  border: 1px solid #aaa;
+}
+
+.topnav button{
+  background-color: #FC7091;
+  border-radius: 15px;
+  border: none;
+  float: right;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 35px;
+  width:90px;
+  margin: 10px;
+  padding: 10px 16px;
+  position: auto;
+  text-align: center;
+  text-decoration: none;
+  position:relative;
+  top:15px;
+}
+
+.topnav a {
+  float: left;
+  color: #EF4D64;
+  text-align: center;
+  padding: 18px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  position:relative;
+  top:15px;
+  left:90px;
+ 
+}
+
+.topnav a:hover {
+ color: black;
+}
+
+.topnav a:active{
+  text-decoration: underline;
+}
+
+
+.tablelabel{
+	color: #000;
+	font-size: 20px;
+	margin-left: 10%;
+}
+
+.tableform{
+  width:100%;
+}
+
+
+.btn {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #FC7091;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 60px;
+  cursor: pointer;
+  font-weight: 500;
+  height: 35px;
+  
+}
+
+.btn:hover {
+  background-color: #FFE5E5
+}
+
+.btn:active {
+  background-color: #FFE5E5;
+  transform: translateY(4px);
+}
+
+input[type="radio"] {
+  -ms-transform: scale(1.8); /* IE 9 */
+  -webkit-transform: scale(1.8); /* Chrome, Safari, Opera */
+  transform: scale(1.8);
+  margin: 0 15px 0 15px;
+}
+
+
+.selectt {
+  font-family: "Times New Roman", Times, serif;
+  width: 20%;
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.01);
+  border: none;
+  border-bottom: 1px solid #EF4D64;
+  border-top: 1px solid #EF4D64;
+  outline: none;
+  background: transparent;
+}
+
+
+.selectt option{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+
+
